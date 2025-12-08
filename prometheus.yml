@@ -6,8 +6,9 @@ scrape_configs:
   - job_name: 'events_app'
     metrics_path: '/events/actuator/prometheus'
     static_configs:
-      - targets: ['localhost:8089']
-
+      - targets: ['events_app:8089']   # use the container name
+        labels:
+          application: 'events-project'
 
   # 📦 cAdvisor : métriques des conteneurs Docker
   - job_name: 'cadvisor'
