@@ -15,7 +15,7 @@ scrape_configs:
   # 📦 cAdvisor : métriques des conteneurs Docker
   - job_name: 'cadvisor'
     static_configs:
-      - targets: ['cadvisor:8080']
+      - targets: ['cadvisor:8083']
 
   # 🖥️ Node-exporter : métriques de la VM / host
   - job_name: 'node-exporter'
