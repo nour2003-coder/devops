@@ -3,10 +3,12 @@ global:
   evaluation_interval: 5s      # fréquence d'évaluation des règles
 
 scrape_configs:
+
+  # 🌱 Spring Boot app (EventsProject)
   - job_name: 'events_app'
-    metrics_path: '/actuator/prometheus'
+    metrics_path: '/events/actuator/prometheus'
     static_configs:
-      - targets: ['eventsapp:8089']   # use the container name
+      - targets: ['app:8089']
         labels:
           application: 'events-project'
 
