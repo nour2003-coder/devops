@@ -8,14 +8,14 @@ scrape_configs:
   - job_name: 'events_app'
     metrics_path: '/events/actuator/prometheus'
     static_configs:
-      - targets: ['eventsapp:8080']
+      - targets: ['eventsapp:8089']
         labels:
           application: 'events-project'
 
   # 📦 cAdvisor : métriques des conteneurs Docker
   - job_name: 'cadvisor'
     static_configs:
-      - targets: ['cadvisor:8083']
+      - targets: ['cadvisor:8080']
 
   # 🖥️ Node-exporter : métriques de la VM / host
   - job_name: 'node-exporter'
