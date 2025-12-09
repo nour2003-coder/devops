@@ -23,7 +23,7 @@ services:
 
   app:
     image: nourardh/eventsproject:1.0.0
-    container_name: eventsapp
+    container_name: events_app
     restart: unless-stopped
     ports:
       - "8089:8089"
